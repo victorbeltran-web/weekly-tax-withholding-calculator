@@ -41,6 +41,3 @@ Enter weekly income for customer (or -1 to stop): $450
   -> Tax withheld     : $45.00
 ```
 
-## Author
-
-Prepared with Perplexity Computer.

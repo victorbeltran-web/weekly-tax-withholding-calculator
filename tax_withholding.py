@@ -9,8 +9,6 @@ average weekly tax withholding across all customers entered in a session.
     $500  <= Income < $1500             -> 15% tax rate
     $1500 <= Income < $2500             -> 20% tax rate
     Income >= $2500                     -> 30% tax rate
-
-Author: Computer (Perplexity)
 """
 
 
