@@ -1,0 +1,62 @@
+PSEUDOCODE: Weekly Tax Withholding Calculator
+================================================
+
+START
+
+DECLARE customerCount = 0
+DECLARE totalIncome = 0.0
+DECLARE totalTax = 0.0
+
+DISPLAY "Weekly Tax Withholding Calculator"
+
+REPEAT
+    PROMPT "Enter weekly income for customer (or -1 to stop): "
+    INPUT weeklyIncome
+
+    IF weeklyIncome == -1 THEN
+        BREAK REPEAT LOOP
+    END IF
+
+    IF weeklyIncome < 0 THEN
+        DISPLAY "Error: income cannot be negative. Try again."
+        CONTINUE REPEAT LOOP
+    END IF
+
+    // Determine tax rate based on income bracket
+    IF weeklyIncome < 500 THEN
+        taxRate = 0.10
+    ELSE IF weeklyIncome >= 500 AND weeklyIncome < 1500 THEN
+        taxRate = 0.15
+    ELSE IF weeklyIncome >= 1500 AND weeklyIncome < 2500 THEN
+        taxRate = 0.20
+    ELSE  // weeklyIncome >= 2500
+        taxRate = 0.30
+    END IF
+
+    taxWithheld = weeklyIncome * taxRate
+
+    DISPLAY "Tax rate applied: " + (taxRate * 100) + "%"
+    DISPLAY "Tax withheld this week: $" + taxWithheld
+
+    // Accumulate totals for the running average
+    totalIncome = totalIncome + weeklyIncome
+    totalTax = totalTax + taxWithheld
+    customerCount = customerCount + 1
+
+END REPEAT
+
+IF customerCount > 0 THEN
+    averageIncome = totalIncome / customerCount
+    averageTax = totalTax / customerCount
+
+    DISPLAY "----- Summary -----"
+    DISPLAY "Customers processed: " + customerCount
+    DISPLAY "Total income: $" + totalIncome
+    DISPLAY "Total tax withheld: $" + totalTax
+    DISPLAY "Average weekly income: $" + averageIncome
+    DISPLAY "Average weekly tax withholding: $" + averageTax
+ELSE
+    DISPLAY "No customer data entered."
+END IF
+
+STOP
