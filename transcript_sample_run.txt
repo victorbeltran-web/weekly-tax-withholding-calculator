@@ -1,0 +1,28 @@
+==================================================
+   WEEKLY TAX WITHHOLDING CALCULATOR
+==================================================
+Enter weekly income for customer (or -1 to stop): $450
+  -> Tax rate applied : 10%
+  -> Tax withheld     : $45.00
+
+Enter weekly income for customer (or -1 to stop): $900
+  -> Tax rate applied : 15%
+  -> Tax withheld     : $135.00
+
+Enter weekly income for customer (or -1 to stop): $1800
+  -> Tax rate applied : 20%
+  -> Tax withheld     : $360.00
+
+Enter weekly income for customer (or -1 to stop): $3000
+  -> Tax rate applied : 30%
+  -> Tax withheld     : $900.00
+
+Enter weekly income for customer (or -1 to stop): $-1
+--------------------------------------------------
+SUMMARY
+Customers processed          : 4
+Total weekly income          : $6,150.00
+Total tax withheld           : $1,440.00
+Average weekly income        : $1,537.50
+Average weekly tax withholding: $360.00
+--------------------------------------------------
